@@ -1,1 +1,1 @@
-**Project page:** http://vlislab22.github.io/OmniZoomer
+**Project page:** http://vlislab22.github.io/OmniZoomer/
