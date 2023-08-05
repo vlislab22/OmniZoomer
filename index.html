@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="FMapping">
+    <meta name="keywords" content="fmap">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{OmniZoomer}: Learning to Move and Zoom in on Sphere at High-Resolution</title>
+ 
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      
+      function gtag() {
+      dataLayer.push(arguments);
+      }
+
+      gtag('js', new Date());
+
+      gtag('config', 'G-PYVRSFMDRL');
+    </script>
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="stylesheet" type="text/css" href="./static/css/magnifier.css">
+    
+  </head>
+
+  <body>
+
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-2 publication-title">OmniZoomer: Learning to Move and Zoom in on Sphere at High-Resolution</h1>
+
+                            <div class="is-size-5 publication-authors">
+
+                <span class="author-block">
+                  <!--<a href="https://mohammadjohari.github.io/"> Mohammad Mahdi Johari</a> <sup>1,2</sup>, <a href="https://ch.linkedin.com/in/camilla-carta"> Camilla Carta </a><sup>3</sup>, <a href="https://fleuret.org/francois/"> François Fleuret </a><sup>4,2,1</sup> </span> -->
+                  Zidong Cao </a> <sup>1</sup>, 
+                  Hao Ai </a><sup>1,3</sup>, 
+                  Yan-Pei Cao </a><sup>3</sup>,
+                  Ying Shan </a><sup>3</sup>,
+                  Xiaohu Qie </a><sup>3</sup>,
+                  Lin Wang </a><sup>1,2</sup>
+                </span>
+
+                <div class="is-size-5 publication-authors">
+                  <span class="author-block"><sup>1</sup> AI Thrust, HKUST(GZ) &nbsp;&nbsp;</span>
+                  <span class="author-block"><sup>2</sup> Dept. of CSE, HKUST &nbsp;&nbsp;</span>
+                  <span class="author-block"><sup>3</sup> ARC Lab, Tencent PCG &nbsp;&nbsp;</span>
+                </div>
+
+                <br>
+                <div class="column has-text-centered">
+                  <div class="publication-links">
+
+                    <!-- <\!-- PDF -\-> -->
+                    <!--  <span class="link-block">
+                       <a href="https://publidiap.idiap.ch/attachments/papers/2023/Johari_CVPR_2023.pdf"
+                          class="external-link button is-normal is-rounded is-dark">
+                         <span class="icon">
+                           <i class="fa fa-file-pdf-o"></i>
+                         </span>
+                         <span>Paper</span>
+                       </a>
+                     </span>  -->
+
+                    <!-- <\!-- ArXiv -\->               -->
+                    <span class="link-block">
+                      <a href="http://arxiv.org/abs/2306.00579"
+                         class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="ai ai-arxiv"></i>
+                        </span>
+                        <span>arXiv</span>
+                      </a>
+                    </span>
+
+                    <!-- <\!-- supplementary PDF -\-> -->
+                    <!-- <span class="link-block"> -->
+                    <!--   <a href="include/supp.pdf" -->
+                    <!--      class="external-link button is-normal is-rounded is-dark"> -->
+                    <!--     <span class="icon"> -->
+                    <!--       <i class="fas fa-file-pdf"></i> -->
+                    <!--     </span> -->
+                    <!--     <span>Supplementary</span> -->
+                    <!--   </a> -->
+                    <!-- </span> -->
+
+                    <!-- Video -->
+<!--                    <span class="link-block">-->
+<!--                      <a href="https://www.youtube.com/watch?v=-jNBsG3IP54"-->
+<!--                         class="external-link button is-normal is-rounded is-dark">-->
+<!--                        <span class="icon">-->
+<!--                          <i class="fa fa-video-camera"></i>-->
+<!--                        </span>-->
+<!--                        <span>Video</span>-->
+<!--                      </a>-->
+<!--                    </span>-->
+
+                    <!-- Code -->
+                    <span class="link-block">
+                      <a href="https://github.com/thua919/FMapping"
+                         class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fa-brands fa-github"></i>
+                          </svg>
+                        </span>
+                        <span>Code</span>
+                      </a>
+                    </span>
+
+                  </div>
+                </div>
+              </div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+
+    <br>
+
+    <section class="section">
+      <div class="container">
+
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-two-thirds">
+            <h2 class="title is-2">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                Omnidirectional images (ODIs) have become increasingly popular, as their large field-of-view (FoV) can offer viewers the chance to freely choose the view directions in immersive environments such as virtual reality. The M\"obius transformation is typically employed to further provide the opportunity for movement and zoom on ODIs, but applying it to the image level often results in blurry effect and aliasing problem. In this paper, we propose a novel deep learning-based approach, called \textbf{OmniZoomer}, to incorporate the M\"obius transformation into the network for movement and zoom on ODIs. By learning various transformed feature maps under different conditions, the network is enhanced to handle the increasing edge curvatures, which alleviates the blurry effect. Moreover, to address the aliasing problem, we propose two key components. Firstly, to compensate for the lack of pixels for describing curves, we enhance the feature maps in the high-resolution (HR) space and calculate the transformed index map with a spatial index generation module. Secondly, considering that ODIs are inherently represented in the spherical space, we propose a spherical resampling module that combines the index map and HR feature maps to transform the feature maps for better spherical correlation. The transformed feature maps are decoded to output a zoomed ODI. Experiments show that our method can produce HR and high-quality ODIs with the flexibility to move and zoom in to the object of interest.            
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container"> 
+        <!--/ Overview. -->
+        <div align="center" style="margin-top:80px;" style="margin-bottom:120px;">
+          <img style='height: auto; width: 100%; object-fit: contain'
+               src="framework.png" alt="overview_image">
+        </div>
+      </div>
+
+    </section>
+
+    <br>
+    <br>
+    <br>
+
+    <section>
+      <div class="container"> 
+        <div class="columns is-centered"> 
+          <div class="column is-full-width">
+            <h2 align="center"  class="title is-2"> Results </h2>
+
+                          
+              <!-- Images -->
+              <div class="container"> 
+                <div align="center" style="margin-top:80px;" style="margin-bottom:120px;">
+                  <img style='height: auto; width: 90%; object-fit: contain'
+                        src="show1.png" alt="show1">
+              </div>
+              </div>
+              <br>
+            <h3 align="center"> Our OmniZoomer with increasing zoom levels.
+            </h3>
+              <br>
+           
+              <div class="container"> 
+                <div align="center" style="margin-top:80px;" style="margin-bottom:120px;">
+                  <img style='height: auto; width: 100%; object-fit: contain'
+                        src="show2.png" alt="show2">
+              </div>
+              </div>
+              <br>
+              <h3 align="center"> Comparison with increasing zoom levels.</h3>
+              <br>
+    </section>
+
+    <br>
+    <br>
+    <br>
+
+      <section class="section" id="BibTeX citation">
+        <div class="container content">
+          <h2 class="title">BibTeX</h2>
+          <pre><code>
+@inproceedings{fmaphua23,
+  author = {Z, Cao. H, Ai. and L, Wang.},
+  title = {{{OmniZoomer}: Learning to Move and Zoom in on Sphere at High-Resolution},
+  year = {2023},
+  type = {arXiv}
+}
+          </code></pre>
+        </div>
+      </section>
+
+  </body>
+</html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="./static/js/bulma-carousel.min.js"></script>
+<script src="./static/js/bulma-slider.min.js"></script>
+<script src="./static/js/index.js"></script>  
+
+<script src="./static/js/magnifier.js"></script>
+<script> imageZoom("reference", ["zoomed-imap", "zoomed-nice", "zoomed-eslam" ], 7); </script>
+<script> imageZoom("reference_mesh", ["zoomed-imap_mesh", "zoomed-nice_mesh", "zoomed-eslam_mesh" ], 7); </script>
