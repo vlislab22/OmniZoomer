@@ -37,24 +37,24 @@
             <div class="col-md-12 text-center">
                 <ul class="list-inline">
                     <li>
-                        <a href="https://scholar.google.com/citations?hl=en&user=DIy4cA0AAAAJ" >
+                        <a href="https://scholar.google.com/citations?user=q1FcZzIAAAAJ&hl=zh-CN" >
                          Zidong Cao
                         </a>
-                        
                         <br /> AI Thrust, HKUST(GZ)
                         <br /> &nbsp &nbsp
 
                     </li>
 
                     <li>
+			    <a href="https://scholar.google.com/citations?user=QNlF0DsAAAAJ&hl=zh-CN" >
                         Hao Ai
-                      </a>
+                      </a> 
                       <br /> AI Thrust, HKUST(GZ)
                       <br /> &nbsp &nbsp
                     </li>
 
                     <li>
-                        <a href="https://scholar.google.com/citations?user=G1NiRmwAAAAJ&hl=en" >
+                        <a href="https://scholar.google.com/citations?user=50194vkAAAAJ&hl=zh-CN" >
                            Yan-Pei Cao
                         </a>
                         <br /> ARC Lab, Tencent PCG
@@ -63,7 +63,7 @@
                     </li>
                   
                     <li>
-                        <a href="https://addisonwang2013.github.io/vlislab/linwang.html">
+                        <a href="https://scholar.google.com/citations?hl=zh-CN&user=4oXBp9UAAAAJ">
                            Ying Shan
                         </a>
                         <br /> ARC Lab, Tencent PCG
@@ -71,7 +71,7 @@
                     </li>
 
                   <li>
-                        <a href="https://scholar.google.com/citations?user=G1NiRmwAAAAJ&hl=en" >
+                        <a href="https://scholar.google.com/citations?hl=zh-CN&user=mk-F69UAAAAJ" >
                            Xiaohu Qie
                         </a>
                         <br /> ARC Lab, Tencent PCG
@@ -80,7 +80,7 @@
                     </li>
 
                   <li>
-                        <a href="https://scholar.google.com/citations?user=G1NiRmwAAAAJ&hl=en" >
+                        <a href="https://scholar.google.com/citations?user=SReb2csAAAAJ&hl=zh-CN" >
                            Lin Wang
                         </a>
                         <br /> AI Thrust, HKUST(GZ) 
@@ -98,7 +98,7 @@
                 <div class="col-md-8 col-md-offset-2 text-center">
                     <ul class="nav nav-pills nav-justified">
                         <li>
-			                <a href="https://arxiv.org/abs/2307.15333">
+		
                             <img src="./image/arxiv.png" height="100px"><br>
                                 <h4><strong>Paper</strong></h4>
                             </a>
@@ -110,26 +110,12 @@
                             </a>
                         </li>
                         <li>
-                            <a href="https://github.com/164140757/DOT">
+                
                             <img src="./image/github_icon.jpg" height="100px"><br>
                                 <h4><strong>Code</strong></h4>
                             </a>
                         </li>
-
-                        <!-- <li>
-                            
-                            <img src="./image/colab_icon.jpg" height="100px"><br>
-                                <h4><strong>Colab</strong></h4>
-                            </a>
-                        </li> -->
- 
-
-                        <li>
-                            <!-- <a href="https://github.com/haoai-1997/haoai-1997.github.io/blob/main/HRDFuse/CVPR2023_HRDFuse_supp.pdf"> -->
-                            <img src="./image/slide_icon.jpg" height="100px"><br>
-                                <h4><strong>Supp</strong></h4>
-                            </a>
-                        </li>                     
+                     
                         <li>
                             <a href="https://vlislab22.github.io/vlislab/">
                             <img src="./image/lab_logo.png" height="100px"><br>
@@ -158,43 +144,37 @@
 
         <!-- ##### Results #####-->
 
-     <div class="row">     
-        <div class="col-md-8 col-md-offset-2">
-            <h3>
-                Inspiration
-            </h3>
-            <p class="text-justify">
-                While the POT framework is effective, its fixed octree structure can limit its adaptability to varying scene complexities.
-                 We introduce hierarchical feature fusion with sampling/pruning to overcome this limitation, as illustrated by the dashed box below. 
-                 Varying colors on the grid represent the training signals. 
-                 Internal nodes are denoted in <span style="color:orange">orange</span>, 
-                 while leaf nodes in <span style="color:green">orange</span>. Pruning occurs in regions of weak signal, 
-                 where cached properties in leaf nodes are aggregated, and the averaged value is propagated to internal nodes, 
-                 which become the new leaves. Complementary sampling takes place in the red regions. 
-                 The resulting sampling distribution exhibits significant improvement, as highlighted by the red boxes in our final octree results.
-            </p>
-            <img src="./image/teaser.png" class="img-responsive" alt="vis_res"  class="center" >
-      </div>           
-     <div class="col-md-8 col-md-offset-2">
+     <div class="row">   
+	     <div class="col-md-8 col-md-offset-2">
           <h3>
-              Comparison on octree representations
+              Framework
           </h3>
           <p class="text-justify">
-            DOT shows the more compact structure of DOT, 
-            resulting in fewer ray intersections, explaining our significant rendering speed boost.
+            Overall framework of our OmniZoomer.
+          </p>
+		  <img src="./image/framework.png" class="img-responsive" alt="vis_res" class="center"><br>
+    </div>  
+	     
+     <div class="col-md-8 col-md-offset-2">
+          <h3>
+              Visual comparison on continous zoom.
+          </h3>
+          <p class="text-justify">
+            From top to bottom: spherical images predicted from OmniZoomer, equirectangular projection (ERP) from spherical images, and perspective projection from ERP images with a specific field-of-view (FoV), w.r.t. the blue regions. From left to right: increasing zoom levels. Our approach can move to the object of interest, e.g., the sculpture, and freely zoom in and zoom out on omnidirectional images with clear textural details and preserved shapes, even in large zoom levels.
 
           </p>
-		  <img src="./image/dot_cp.png" class="img-responsive" alt="vis_res" class="center"><br>
+		  <img src="./image/show1.png" class="img-responsive" alt="vis_res" class="center"><br>
     </div>   
     <div class="col-md-8 col-md-offset-2">
         <h3>
-            Comparison on visual quality and memory consumption
+            Visual comparison on different image enhancement methods.
         </h3>
         <p class="text-justify">
-            DOT provides more details in complex regions, such as sharper reflections on windows and more evident edges on fences. 
+           From top to bottom: 
+equirectangular projection (ERP) of omnidirectional images, perspective projection from ERP images with a specific field-of-view (FoV), w.r.t. the blue regions, and results from LAU-Net, OmniZoomer and Ground truth (from left to right). From left to right: increasing zoom levels.  
 
         </p>
-        <img src="./image/dot_cp2.png" class="img-responsive" alt="vis_res" class="center"><br>
+        <img src="./image/show2.png" class="img-responsive" alt="vis_res" class="center"><br>
     </div>     
     </div>
 
@@ -210,7 +190,7 @@
     <div class="col-md-8 col-md-offset-2">
 
             <video width="800"  controls >
-                <source src="./video/dot.mp4" type="video/mp4">
+                <source src="./video/demo.mp4" type="video/mp4">
               Your browser does not support HTML video.
             </video>   
     </div>          
